@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using PrimeraWeb.Data;
+
 namespace PrimeraWeb
 {
     public class Program
@@ -8,6 +11,12 @@ namespace PrimeraWeb
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+
+
+            builder.Services.AddDbContext<SupermarketContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("SupermarketDB"))
+                
+            );
 
             var app = builder.Build();
 
