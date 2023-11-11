@@ -1,4 +1,6 @@
-﻿namespace PrimeraWeb.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace PrimeraWeb.Models
 {
     public class Category
     {
