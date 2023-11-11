@@ -31,8 +31,12 @@
 					@Html.DisplayFor(modelItem => item.Name)
 				</td>
 				<td>
-					<span></span>
+					@Html.DisplayFor(modelItem => item.Description)
 				</td>
+					<td>
+						<span></span>
+						<a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+					</td>
 			</tr>
 		}
 	</tbody>
